@@ -39,8 +39,10 @@ class App extends Component {
           justifyContent="center"
         >
           <Box width={4 / 7} py={3}>
-            <Link className="codemoe brand" href="/" color="white">
-              <Text fontSize={3}>/0/!hack</Text>
+            <Link className="codemoe" href="/" color="white">
+              <Text className="brand" fontSize={3}>
+                /0/!hack
+              </Text>
             </Link>
           </Box>
           <Box width={2 / 21} py={3}>
