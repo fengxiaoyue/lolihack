@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Box, Flex, Link, Card, Image, Heading, Text } from "rebass";
+import { Box, Flex, Link, Text } from "rebass";
 import "./App.css";
 import { ThemeProvider } from "styled-components";
-import { Folder, Send, Info, Heart } from "react-feather";
-import bishojo from "./../Images/bishojo.png";
+import { Folder, Send, Info } from "react-feather";
 
 const darkslateblue = "#483d8b";
 const darkcyanblue = "#080d16";
@@ -40,10 +39,9 @@ class App extends Component {
           justifyContent="center"
         >
           <Box width={4 / 7} py={3}>
-            <Link className="codemoe" href="/" color="white">
-              <Text fontSize={5}>/0/!hack</Text>
+            <Link className="codemoe brand" href="/" color="white">
+              <Text fontSize={3}>/0/!hack</Text>
             </Link>
-            <Text fontSize={2}>ui/ux &amp; front-end dev</Text>
           </Box>
           <Box width={2 / 21} py={3}>
             <Link className="codemoe" href="/about" color="inherit" py={1}>
@@ -64,19 +62,20 @@ class App extends Component {
             </Link>
           </Box>
           <Box width={4 / 7}>
-            <Image src={bishojo} width={1000} />
+            <h1 className="codehack"> cd /0/!hack</h1>
+            <p className="coderesponse">bash: !hack: event not found</p>
           </Box>
           <Box width={2 / 7}>
-            <Text fontSize={6} color="white">
-              tech nomad.
+            <Text fontSize={5} color="white">
+              tech nomad
             </Text>
             <Text>devops: ubuntu 18.04 git</Text>
-            <Text fontSize={6} color="white">
-              artful developer.
+            <Text fontSize={5} color="white">
+              artful developer
             </Text>
             <Text>webdev: node react laravel bootstrap material</Text>
-            <Text fontSize={6} color="white">
-              critical designer.
+            <Text fontSize={5} color="white">
+              critical designer
             </Text>
             <Text>ui/ux: photoshop illustrator xd</Text>
           </Box>

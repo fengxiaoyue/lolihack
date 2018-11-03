@@ -1,27 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 .codemoe {
   text-decoration: none;
   display: flex;
@@ -29,8 +5,12 @@
   align-items: center;
 }
 
+.brand:hover {
+  color: #f33441;
+}
+
 .codemoe div:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .codemoe svg {
@@ -51,11 +31,55 @@ svg {
   margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
+.codehack {
+  position: relative;
+  top: 30%;
+  width: 7em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 500%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  animation: type 1.5s steps(13) 1s 1 normal both,
+    blinker 500ms steps(13) infinite normal;
+}
+
+.coderesponse {
+  position: relative;
+  top: 18%;
+  animation: response 0.05s;
+  animation-delay: 4.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  text-align: center;
+  color: #ffffff;
+}
+
+@keyframes type {
   from {
-    transform: rotate(0deg);
+    width: 0;
   }
   to {
-    transform: rotate(360deg);
+    width: 7em;
+  }
+}
+
+@keyframes blinker {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes response {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
