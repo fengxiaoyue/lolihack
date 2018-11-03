@@ -29,13 +29,17 @@
   align-items: center;
 }
 
-.codemoe:hover {
+.codemoe div:hover {
   color: white;
 }
 
+.codemoe svg {
+  color: #ffffff;
+}
+
 .main {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   background: url("../Images/bg-pattern.png"), #080d16;
   background: url("../Images/bg-pattern.png"),
     -webkit-linear-gradient(to left, #080d16, #080d16);

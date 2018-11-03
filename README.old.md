@@ -1,2 +1,0 @@
-# lolihack
-Hacking Lolis
