@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Box, Flex, Link, Text } from "rebass";
+import { Box, Flex, Link, Text, Heading } from "rebass";
 import "./App.css";
 import { ThemeProvider } from "styled-components";
 import { Folder, Send, Info } from "react-feather";
@@ -38,45 +38,57 @@ class App extends Component {
           color={pinkred}
           justifyContent="center"
         >
-          <Box width={4 / 7} py={3}>
+          <Box width={[1, 1 / 3, 4 / 7]} py={3}>
             <Link className="codemoe" href="/" color="white">
               <Text className="brand" fontSize={3}>
                 /0/!hack
               </Text>
             </Link>
           </Box>
-          <Box width={2 / 21} py={3}>
-            <Link className="codemoe" href="/about" color="inherit" py={1}>
+          <Box width={[1 / 3, 2 / 21]} py={3}>
+            <Link className="codemoe" href="/about" color="inherit" py={[0, 1]}>
               <Info />
               <Text>about</Text>
             </Link>
           </Box>
-          <Box width={2 / 21} py={3}>
-            <Link className="codemoe" href="/projects" color="inherit" py={1}>
+          <Box width={[1 / 3, 2 / 21]} py={3}>
+            <Link
+              className="codemoe"
+              href="/projects"
+              color="inherit"
+              py={[0, 1]}
+            >
               <Folder />
               <Text>projects</Text>
             </Link>
           </Box>
-          <Box width={2 / 21} py={3}>
-            <Link className="codemoe" href="/contact" color="inherit" py={1}>
+          <Box width={[1 / 3, 2 / 21]} py={3}>
+            <Link
+              className="codemoe"
+              href="/contact"
+              color="inherit"
+              py={[0, 1]}
+            >
               <Send />
               <Text>contact</Text>
             </Link>
           </Box>
-          <Box width={4 / 7}>
-            <h1 className="codehack"> cd /0/!hack</h1>
-            <p className="coderesponse">bash: !hack: event not found</p>
+          <Box width={[1, 4 / 7]}>
+            <Heading className="codehack" fontSize={5}>
+              cd /0/!hack
+            </Heading>
+            <Text className="coderesponse">bash: !hack: event not found</Text>
           </Box>
-          <Box width={2 / 7}>
-            <Text fontSize={5} color="white">
+          <Box width={[1, 1 / 2, 2 / 7]}>
+            <Text fontSize={[3, 5]} color="white">
               tech nomad
             </Text>
             <Text>devops: ubuntu 18.04 git</Text>
-            <Text fontSize={5} color="white">
+            <Text fontSize={[3, 5]} color="white">
               artful developer
             </Text>
             <Text>webdev: node react laravel bootstrap material</Text>
-            <Text fontSize={5} color="white">
+            <Text fontSize={[3, 5]} color="white">
               critical designer
             </Text>
             <Text>ui/ux: photoshop illustrator xd</Text>
