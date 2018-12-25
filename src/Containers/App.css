@@ -3,13 +3,14 @@
   display: flex;
   align-content: center;
   align-items: center;
+  color: #ffffff;
 }
 
 .brand:hover {
   color: #f33441;
 }
 
-.codemoe div:hover {
+.codemoe a:hover {
   color: #ffffff;
 }
 
@@ -47,7 +48,7 @@ svg {
 
 .coderesponse {
   position: relative;
-  top: 18%;
+  top: 25%;
   animation: response 0.05s;
   animation-delay: 4.5s;
   opacity: 0;
