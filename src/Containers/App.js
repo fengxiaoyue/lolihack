@@ -53,19 +53,19 @@ class App extends Component {
             </Box>
             <Box width={[1 / 3, 2 / 21]} py={3}>
               <RouteLink to="/about" className="codemoe">
-                <Info />
+                <Info size={24} />
                 <Text>about</Text>
               </RouteLink>
             </Box>
             <Box width={[1 / 3, 2 / 21]} py={3}>
               <RouteLink to="/projects" className="codemoe">
-                <Folder />
+                <Folder size={24} />
                 <Text>projects</Text>
               </RouteLink>
             </Box>
             <Box width={[1 / 3, 2 / 21]} py={3}>
               <RouteLink to="/contact" className="codemoe">
-                <Send />
+                <Send size={24} />
                 <Text>contact</Text>
               </RouteLink>
             </Box>

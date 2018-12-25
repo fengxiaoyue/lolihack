@@ -34,13 +34,10 @@ svg {
 
 .codehack {
   position: relative;
-  top: 30%;
+  top: 25%;
+  margin: auto;
   width: 7em;
-  margin: 0 auto;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
   transform: translateY(-50%);
   animation: type 1.5s steps(13) 1s 1 normal both,
     blinker 500ms steps(13) infinite normal;
@@ -48,7 +45,7 @@ svg {
 
 .coderesponse {
   position: relative;
-  top: 25%;
+  top: 20%;
   animation: response 0.05s;
   animation-delay: 4.5s;
   opacity: 0;
