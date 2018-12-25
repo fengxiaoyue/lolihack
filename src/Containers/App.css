@@ -35,8 +35,10 @@ svg {
 .codehack {
   position: relative;
   top: 25%;
-  margin: auto;
+  margin: auto !important;
   width: 7em;
+  white-space: nowrap;
+  overflow: hidden;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   transform: translateY(-50%);
   animation: type 1.5s steps(13) 1s 1 normal both,
