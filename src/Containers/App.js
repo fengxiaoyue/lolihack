@@ -53,19 +53,19 @@ class App extends Component {
             </Box>
             <Box width={[1 / 3, 2 / 21]} py={3}>
               <RouteLink to="/about" className="codemoe">
-                <Info size={24} />
+                <Info size={20} />
                 <Text>about</Text>
               </RouteLink>
             </Box>
             <Box width={[1 / 3, 2 / 21]} py={3}>
               <RouteLink to="/projects" className="codemoe">
-                <Folder size={24} />
+                <Folder size={20} />
                 <Text>projects</Text>
               </RouteLink>
             </Box>
             <Box width={[1 / 3, 2 / 21]} py={3}>
               <RouteLink to="/contact" className="codemoe">
-                <Send size={24} />
+                <Send size={20} />
                 <Text>contact</Text>
               </RouteLink>
             </Box>
@@ -94,15 +94,15 @@ class Home extends Component {
           <Text fontSize={[3, 5]} color="white">
             tech nomad
           </Text>
-          <Text>devops project_management</Text>
+          <Text>software development & IT ops</Text>
           <Text fontSize={[3, 5]} color="white">
             artful developer
           </Text>
-          <Text>webdev node react laravel</Text>
+          <Text>web & mobile development</Text>
           <Text fontSize={[3, 5]} color="white">
             critical designer
           </Text>
-          <Text>ui/ux adobe product_design</Text>
+          <Text>user interface & user experience</Text>
         </Box>
       </Fragment>
     );
