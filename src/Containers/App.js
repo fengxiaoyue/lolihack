@@ -32,44 +32,44 @@ class App extends Component {
             color={fraudulent}
             justifyContent="center"
             css={{
-              height: "100vh",
+              minHeight: "100vh",
               width: "100vw",
               a: { textDecoration: "none" }
             }}
           >
-            <Flex width={1} px={7} py={4}>
-              <Box width={2 / 3}>
+            <Flex width={1} px={[2, 7]} py={[2, 4]}>
+              <Flex width={[1 / 5, 2 / 3]}>
                 <RouteLink to="/">
-                  <Text fontSize={3} color={offwhite}>
+                  <Text fontSize={16} color={offwhite}>
                     /0/!hack
                   </Text>
                 </RouteLink>
-              </Box>
-              <Flex width={1 / 3} justifyContent="flex-end">
-                <Box px={4}>
+              </Flex>
+              <Flex width={[4 / 5, 1 / 3]} justifyContent="flex-end">
+                <Box pl={[3, 4]}>
                   <RouteLink to="/about">
                     <Flex color={offwhite} alignItems="center">
-                      <Box pr={2}>
+                      <Box pr={[1, 2]}>
                         <Info size={20} />
                       </Box>
                       <Text fontSize={16}>about</Text>
                     </Flex>
                   </RouteLink>
                 </Box>
-                <Box px={4}>
+                <Box pl={[3, 4]}>
                   <RouteLink to="/projects">
                     <Flex color={offwhite} alignItems="center">
-                      <Box pr={2}>
+                      <Box pr={[1, 2]}>
                         <Folder size={20} />
                       </Box>
                       <Text fontSize={16}>projects</Text>
                     </Flex>
                   </RouteLink>
                 </Box>
-                <Box px={4}>
+                <Box pl={[3, 4]}>
                   <RouteLink to="/contact">
                     <Flex color={offwhite} alignItems="center">
-                      <Box pr={2}>
+                      <Box pr={[1, 2]}>
                         <Send size={20} />
                       </Box>
                       <Text fontSize={16}>contact</Text>
@@ -78,7 +78,7 @@ class App extends Component {
                 </Box>
               </Flex>
             </Flex>
-            <Flex width={1} px={7}>
+            <Flex width={1} px={[2, 7]}>
               <Route path="/" exact component={Home} />
               <Route path="/about" component={About} />
               <Route path="/projects" component={Projects} />
@@ -86,7 +86,7 @@ class App extends Component {
             </Flex>
             <Flex
               width={1}
-              px={7}
+              px={[2, 7]}
               alignItems="center"
               justifyContent="flex-end"
             >
@@ -103,8 +103,8 @@ class Home extends Component {
   render() {
     return (
       <>
-        <Flex width={1 / 3} alignItems="center" justifyContent="center">
-          <Box>
+        <Flex width={[1, 1 / 3]} alignItems="center">
+          <Box width={1}>
             <Box width={1} pb={2}>
               <Text fontSize={36} color={offwhite} pb={2}>
                 tech nomad
@@ -131,14 +131,21 @@ class Home extends Component {
             </Box>
           </Box>
         </Flex>
-        <Flex width={2 / 3} alignItems="center" justifyContent="center">
+        {/*
+
+        <Flex
+          width={[1 / 3, 2 / 3]}
+          alignItems="center"
+          justifyContent="center"
+        >
           <Box>
-            <Heading className="codehack" fontSize={48}>
+            <Heading className="codehack" fontSize={[16, 48]}>
               cd /0/!hack
             </Heading>
             <Text>bash: !hack: event not found</Text>
           </Box>
         </Flex>
+        */}
       </>
     );
   }
