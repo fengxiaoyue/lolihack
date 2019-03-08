@@ -8,29 +8,12 @@ import {
   Link as RouteLink
 } from "react-router-dom";
 
-const purple = "#490E49";
-const salmon = "#ED8684";
+const abyss = "#0B0D1D";
 const offwhite = "#FAFAFA";
 const fraudulent = "#0D324D";
 const election = "#7F5A83";
 const theme = {
-  fontSizes: [12, 14, 16, 24, 32, 48, 64],
-  colors: {
-    purple,
-    salmon,
-    offwhite
-  },
-  buttons: {
-    primary: {
-      color: offwhite,
-      backgroundColor: salmon
-    },
-    outline: {
-      color: salmon,
-      backgroundColor: "transparent",
-      boxShadow: "inset 0 0 2px"
-    }
-  }
+  fontSizes: [12, 14, 16, 24, 32, 48, 64]
 };
 
 class App extends Component {
@@ -40,8 +23,8 @@ class App extends Component {
         <ThemeProvider theme={theme}>
           <Flex
             flexWrap="wrap"
-            bg={fraudulent}
-            color={election}
+            bg={abyss}
+            color={fraudulent}
             justifyContent="center"
             css={{
               minHeight: "100vh",
@@ -52,19 +35,15 @@ class App extends Component {
             <Flex width={1}>
               <Box width={2 / 3} p={4}>
                 <RouteLink to="/">
-                  <Text fontSize={3} color={offwhite} alignSelf="center">
+                  <Text fontSize={3} color={offwhite}>
                     /0/!hack
                   </Text>
                 </RouteLink>
               </Box>
-              <Flex width={1 / 3} p={4}>
-                <Box width={1 / 3}>
+              <Flex width={1 / 3} p={4} justifyContent="flex-end">
+                <Box px={4}>
                   <RouteLink to="/about">
-                    <Flex
-                      color={salmon}
-                      justifyContent="flex-end"
-                      alignItems="center"
-                    >
+                    <Flex color={offwhite} alignItems="center">
                       <Box pr={2}>
                         <Info size={20} />
                       </Box>
@@ -72,36 +51,24 @@ class App extends Component {
                     </Flex>
                   </RouteLink>
                 </Box>
-                <Box width={1 / 3}>
+                <Box px={4}>
                   <RouteLink to="/projects">
-                    <Flex
-                      color={salmon}
-                      justifyContent="flex-end"
-                      alignItems="center"
-                    >
+                    <Flex color={offwhite} alignItems="center">
                       <Box pr={2}>
                         <Folder size={20} />
                       </Box>
-                      <Text fontSize={16} color={salmon}>
-                        projects
-                      </Text>
+                      <Text fontSize={16}>projects</Text>
                     </Flex>
                   </RouteLink>
                 </Box>
-                <Box width={1 / 3}>
+                <Box px={4}>
                   <RouteLink to="/contact">
-                    <Text
-                      fontSize={20}
-                      color={salmon}
-                      css={{
-                        alignItems: "center",
-                        display: "flex",
-                        justifyContent: "flex-end"
-                      }}
-                    >
-                      <Send size={24} />
-                      contact
-                    </Text>
+                    <Flex color={offwhite} alignItems="center">
+                      <Box pr={2}>
+                        <Send size={20} />
+                      </Box>
+                      <Text fontSize={16}>contact</Text>
+                    </Flex>
                   </RouteLink>
                 </Box>
               </Flex>
@@ -125,28 +92,40 @@ class App extends Component {
 class Home extends Component {
   render() {
     return (
-      <Fragment>
-        <Box width={[1, 4 / 7]}>
+      <>
+        <Box width={2 / 3} p={4}>
           <Heading className="codehack" fontSize={5}>
             cd /0/!hack
           </Heading>
           <Text className="coderesponse">bash: !hack: event not found</Text>
         </Box>
-        <Box width={[1, 1 / 2, 2 / 7]}>
-          <Text fontSize={[3, 5]} color="white">
-            tech nomad
-          </Text>
-          <Text>software development & IT ops</Text>
-          <Text fontSize={[3, 5]} color="white">
-            artful developer
-          </Text>
-          <Text>web & mobile development</Text>
-          <Text fontSize={[3, 5]} color="white">
-            critical designer
-          </Text>
-          <Text>user interface & user experience</Text>
+        <Box width={1 / 3} p={4}>
+          <Box width={1}>
+            <Text fontSize={[3, 5]} color={offwhite}>
+              tech nomad
+            </Text>
+            <Text bg={fraudulent} color={election}>
+              software development & IT ops
+            </Text>
+          </Box>
+          <Box width={1}>
+            <Text fontSize={[3, 5]} color={offwhite}>
+              artful developer
+            </Text>
+            <Text bg={fraudulent} color={election}>
+              web & mobile development
+            </Text>
+          </Box>
+          <Box width={1}>
+            <Text fontSize={[3, 5]} color={offwhite}>
+              critical designer
+            </Text>
+            <Text bg={fraudulent} color={election}>
+              user interface & user experience
+            </Text>
+          </Box>
         </Box>
-      </Fragment>
+      </>
     );
   }
 }
