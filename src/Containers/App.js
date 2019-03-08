@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { Box, Flex, Text, Heading } from "rebass";
-import { ThemeProvider } from "styled-components";
 import { Folder, Send, Info } from "react-feather";
 import {
   BrowserRouter as Router,
@@ -12,78 +11,73 @@ const abyss = "#0B0D1D";
 const offwhite = "#FAFAFA";
 const fraudulent = "#0D324D";
 const election = "#7F5A83";
-const theme = {
-  fontSizes: [12, 14, 16, 24, 32, 48, 64]
-};
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <ThemeProvider theme={theme}>
-          <Flex
-            flexWrap="wrap"
-            bg={abyss}
-            color={fraudulent}
-            justifyContent="center"
-            css={{
-              minHeight: "100vh",
-              width: "100vw",
-              a: { textDecoration: "none" }
-            }}
-          >
-            <Flex width={1}>
-              <Box width={2 / 3} p={4}>
-                <RouteLink to="/">
-                  <Text fontSize={3} color={offwhite}>
-                    /0/!hack
-                  </Text>
+        <Flex
+          flexWrap="wrap"
+          bg={abyss}
+          color={fraudulent}
+          justifyContent="center"
+          css={{
+            height: "100vh",
+            width: "100vw",
+            a: { textDecoration: "none" }
+          }}
+        >
+          <Flex width={1}>
+            <Box width={2 / 3} p={4}>
+              <RouteLink to="/">
+                <Text fontSize={3} color={offwhite}>
+                  /0/!hack
+                </Text>
+              </RouteLink>
+            </Box>
+            <Flex width={1 / 3} p={4} justifyContent="flex-end">
+              <Box px={4}>
+                <RouteLink to="/about">
+                  <Flex color={offwhite} alignItems="center">
+                    <Box pr={2}>
+                      <Info size={20} />
+                    </Box>
+                    <Text fontSize={16}>about</Text>
+                  </Flex>
                 </RouteLink>
               </Box>
-              <Flex width={1 / 3} p={4} justifyContent="flex-end">
-                <Box px={4}>
-                  <RouteLink to="/about">
-                    <Flex color={offwhite} alignItems="center">
-                      <Box pr={2}>
-                        <Info size={20} />
-                      </Box>
-                      <Text fontSize={16}>about</Text>
-                    </Flex>
-                  </RouteLink>
-                </Box>
-                <Box px={4}>
-                  <RouteLink to="/projects">
-                    <Flex color={offwhite} alignItems="center">
-                      <Box pr={2}>
-                        <Folder size={20} />
-                      </Box>
-                      <Text fontSize={16}>projects</Text>
-                    </Flex>
-                  </RouteLink>
-                </Box>
-                <Box px={4}>
-                  <RouteLink to="/contact">
-                    <Flex color={offwhite} alignItems="center">
-                      <Box pr={2}>
-                        <Send size={20} />
-                      </Box>
-                      <Text fontSize={16}>contact</Text>
-                    </Flex>
-                  </RouteLink>
-                </Box>
-              </Flex>
-            </Flex>
-            <Flex width={1}>
-              <Route path="/" exact component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/projects" component={Projects} />
-              <Route path="/contact" component={Contact} />
-            </Flex>
-            <Flex width={1} alignItems="center" justifyContent="flex-end">
-              <Text color={offwhite}>Hello</Text>
+              <Box px={4}>
+                <RouteLink to="/projects">
+                  <Flex color={offwhite} alignItems="center">
+                    <Box pr={2}>
+                      <Folder size={20} />
+                    </Box>
+                    <Text fontSize={16}>projects</Text>
+                  </Flex>
+                </RouteLink>
+              </Box>
+              <Box px={4}>
+                <RouteLink to="/contact">
+                  <Flex color={offwhite} alignItems="center">
+                    <Box pr={2}>
+                      <Send size={20} />
+                    </Box>
+                    <Text fontSize={16}>contact</Text>
+                  </Flex>
+                </RouteLink>
+              </Box>
             </Flex>
           </Flex>
-        </ThemeProvider>
+          <Flex width={1}>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/contact" component={Contact} />
+          </Flex>
+          <Flex width={1} alignItems="center" justifyContent="flex-end">
+            <Text color={offwhite}>Hello</Text>
+          </Flex>
+        </Flex>
       </Router>
     );
   }
