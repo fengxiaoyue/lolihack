@@ -37,7 +37,7 @@ class App extends Component {
               a: { textDecoration: "none" }
             }}
           >
-            <Flex width={1} px={[2, 7]} py={[2, 4]}>
+            <Flex width={1} px={[3, 7]} py={[3, 4]}>
               <Flex width={[1 / 5, 2 / 3]}>
                 <RouteLink to="/">
                   <Text fontSize={16} color={offwhite}>
@@ -78,7 +78,7 @@ class App extends Component {
                 </Box>
               </Flex>
             </Flex>
-            <Flex width={1} px={[2, 7]}>
+            <Flex width={1} px={[3, 7]}>
               <Route path="/" exact component={Home} />
               <Route path="/about" component={About} />
               <Route path="/projects" component={Projects} />
@@ -86,11 +86,12 @@ class App extends Component {
             </Flex>
             <Flex
               width={1}
-              px={[2, 7]}
-              alignItems="center"
+              px={[3, 7]}
+              py={[3, 4]}
+              alignItems="flex-end"
               justifyContent="flex-end"
             >
-              <Text color={offwhite}>Hello</Text>
+              <Text color={offwhite}>Hello there, stranger.</Text>
             </Flex>
           </Flex>
         </ThemeProvider>
