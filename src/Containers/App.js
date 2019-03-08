@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { Box, Flex, Text, Heading } from "rebass";
-import "./App.css";
 import { ThemeProvider } from "styled-components";
 import { Folder, Send, Info } from "react-feather";
 import {
@@ -9,24 +8,25 @@ import {
   Link as RouteLink
 } from "react-router-dom";
 
-const darkslateblue = "#483d8b";
-const darkcyanblue = "#080d16";
-const pinkred = "#f33441";
-
+const purple = "#490E49";
+const salmon = "#ED8684";
+const offwhite = "#FAFAFA";
+const fraudulent = "#0D324D";
+const election = "#7F5A83";
 const theme = {
   fontSizes: [12, 14, 16, 24, 32, 48, 64],
   colors: {
-    pinkred,
-    darkslateblue,
-    darkcyanblue
+    purple,
+    salmon,
+    offwhite
   },
   buttons: {
     primary: {
-      color: "#fff",
-      backgroundColor: pinkred
+      color: offwhite,
+      backgroundColor: salmon
     },
     outline: {
-      color: pinkred,
+      color: salmon,
       backgroundColor: "transparent",
       boxShadow: "inset 0 0 2px"
     }
@@ -40,39 +40,81 @@ class App extends Component {
         <ThemeProvider theme={theme}>
           <Flex
             flexWrap="wrap"
-            className="main"
-            color={pinkred}
+            bg={fraudulent}
+            color={election}
             justifyContent="center"
+            css={{
+              minHeight: "100vh",
+              width: "100vw",
+              a: { textDecoration: "none" }
+            }}
           >
-            <Box width={[1, 1 / 3, 4 / 7]} py={3}>
-              <RouteLink to="/" className="codemoe">
-                <Text className="brand" fontSize={3}>
-                  /0/!hack
-                </Text>
-              </RouteLink>
-            </Box>
-            <Box width={[1 / 3, 2 / 21]} py={3}>
-              <RouteLink to="/about" className="codemoe">
-                <Info size={20} />
-                <Text>about</Text>
-              </RouteLink>
-            </Box>
-            <Box width={[1 / 3, 2 / 21]} py={3}>
-              <RouteLink to="/projects" className="codemoe">
-                <Folder size={20} />
-                <Text>projects</Text>
-              </RouteLink>
-            </Box>
-            <Box width={[1 / 3, 2 / 21]} py={3}>
-              <RouteLink to="/contact" className="codemoe">
-                <Send size={20} />
-                <Text>contact</Text>
-              </RouteLink>
-            </Box>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/contact" component={Contact} />
+            <Flex width={1}>
+              <Box width={2 / 3} p={4}>
+                <RouteLink to="/">
+                  <Text fontSize={3} color={offwhite} alignSelf="center">
+                    /0/!hack
+                  </Text>
+                </RouteLink>
+              </Box>
+              <Flex width={1 / 3} p={4}>
+                <Box width={1 / 3}>
+                  <RouteLink to="/about">
+                    <Flex
+                      color={salmon}
+                      justifyContent="flex-end"
+                      alignItems="center"
+                    >
+                      <Box pr={2}>
+                        <Info size={20} />
+                      </Box>
+                      <Text fontSize={16}>about</Text>
+                    </Flex>
+                  </RouteLink>
+                </Box>
+                <Box width={1 / 3}>
+                  <RouteLink to="/projects">
+                    <Flex
+                      color={salmon}
+                      justifyContent="flex-end"
+                      alignItems="center"
+                    >
+                      <Box pr={2}>
+                        <Folder size={20} />
+                      </Box>
+                      <Text fontSize={16} color={salmon}>
+                        projects
+                      </Text>
+                    </Flex>
+                  </RouteLink>
+                </Box>
+                <Box width={1 / 3}>
+                  <RouteLink to="/contact">
+                    <Text
+                      fontSize={20}
+                      color={salmon}
+                      css={{
+                        alignItems: "center",
+                        display: "flex",
+                        justifyContent: "flex-end"
+                      }}
+                    >
+                      <Send size={24} />
+                      contact
+                    </Text>
+                  </RouteLink>
+                </Box>
+              </Flex>
+            </Flex>
+            <Flex width={1}>
+              <Route path="/" exact component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/projects" component={Projects} />
+              <Route path="/contact" component={Contact} />
+            </Flex>
+            <Flex width={1} alignItems="center" justifyContent="flex-end">
+              <Text color={offwhite}>Hello</Text>
+            </Flex>
           </Flex>
         </ThemeProvider>
       </Router>
