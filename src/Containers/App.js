@@ -37,65 +37,81 @@ class App extends Component {
               a: { textDecoration: "none" }
             }}
           >
-            <Flex width={1} px={[3, 7]} py={[3, 4]}>
-              <Flex width={[1 / 5, 2 / 3]}>
-                <RouteLink to="/">
-                  <Text fontSize={16} color={offwhite}>
-                    /0/!hack
-                  </Text>
-                </RouteLink>
-              </Flex>
-              <Flex width={[4 / 5, 1 / 3]} justifyContent="flex-end">
-                <Box pl={[3, 4]}>
-                  <RouteLink to="/about">
-                    <Flex color={offwhite} alignItems="center">
-                      <Box pr={[1, 2]}>
-                        <Info size={20} />
-                      </Box>
-                      <Text fontSize={16}>about</Text>
-                    </Flex>
-                  </RouteLink>
-                </Box>
-                <Box pl={[3, 4]}>
-                  <RouteLink to="/projects">
-                    <Flex color={offwhite} alignItems="center">
-                      <Box pr={[1, 2]}>
-                        <Folder size={20} />
-                      </Box>
-                      <Text fontSize={16}>projects</Text>
-                    </Flex>
-                  </RouteLink>
-                </Box>
-                <Box pl={[3, 4]}>
-                  <RouteLink to="/contact">
-                    <Flex color={offwhite} alignItems="center">
-                      <Box pr={[1, 2]}>
-                        <Send size={20} />
-                      </Box>
-                      <Text fontSize={16}>contact</Text>
-                    </Flex>
-                  </RouteLink>
-                </Box>
-              </Flex>
-            </Flex>
+            <Nav />
             <Flex width={1} px={[3, 7]}>
               <Route path="/" exact component={Home} />
               <Route path="/about" component={About} />
               <Route path="/projects" component={Projects} />
               <Route path="/contact" component={Contact} />
             </Flex>
-            <Flex
-              width={1}
-              px={[3, 7]}
-              py={[3, 4]}
-              alignItems="flex-end"
-              justifyContent="flex-end"
-            >
-              <Text color={offwhite}>Hello there, stranger.</Text>
-            </Flex>
+            <Footer />
           </Flex>
         </ThemeProvider>
       </Router>
+    );
+  }
+}
+
+class Nav extends Component {
+  render() {
+    return (
+      <Flex width={1} px={[3, 7]} py={[3, 4]}>
+        <Flex width={[1 / 5, 2 / 3]}>
+          <RouteLink to="/">
+            <Text fontSize={16} color={offwhite}>
+              /0/!hack
+            </Text>
+          </RouteLink>
+        </Flex>
+        <Flex width={[4 / 5, 1 / 3]} justifyContent="flex-end">
+          <Box pl={[3, 4]}>
+            <RouteLink to="/about">
+              <Flex color={offwhite} alignItems="center">
+                <Box pr={[1, 2]}>
+                  <Info size={20} />
+                </Box>
+                <Text fontSize={16}>about</Text>
+              </Flex>
+            </RouteLink>
+          </Box>
+          <Box pl={[3, 4]}>
+            <RouteLink to="/projects">
+              <Flex color={offwhite} alignItems="center">
+                <Box pr={[1, 2]}>
+                  <Folder size={20} />
+                </Box>
+                <Text fontSize={16}>projects</Text>
+              </Flex>
+            </RouteLink>
+          </Box>
+          <Box pl={[3, 4]}>
+            <RouteLink to="/contact">
+              <Flex color={offwhite} alignItems="center">
+                <Box pr={[1, 2]}>
+                  <Send size={20} />
+                </Box>
+                <Text fontSize={16}>contact</Text>
+              </Flex>
+            </RouteLink>
+          </Box>
+        </Flex>
+      </Flex>
+    );
+  }
+}
+
+class Footer extends Component {
+  render() {
+    return (
+      <Flex
+        width={1}
+        px={[3, 7]}
+        py={[3, 4]}
+        alignItems="flex-end"
+        justifyContent="flex-end"
+      >
+        <Text color={offwhite}>Hello there, stranger.</Text>
+      </Flex>
     );
   }
 }
